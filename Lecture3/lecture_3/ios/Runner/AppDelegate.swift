@@ -7,6 +7,10 @@ import Flutter
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
+<<<<<<< Updated upstream
+=======
+    GMSServices.provideAPIKey("AIzaSyBaSXN_XDF9iqZaMz8WzQX4YlE-eEhgnd0")
+>>>>>>> Stashed changes
     GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
