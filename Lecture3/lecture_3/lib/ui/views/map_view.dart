@@ -80,6 +80,7 @@ class _MapViewState extends State<MapView> {
           ),
           selectedRes != null ? 
           Positioned(
+            //set located position with bottom, left and right
             bottom: 10,
             left: 10,
             right: 50,
