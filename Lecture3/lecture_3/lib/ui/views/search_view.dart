@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:lecture_3/utils/helper.dart';
+import 'package:lecture_3/ui/views/res_list_view.dart';
 
 class SearchView extends StatefulWidget {
   @override
@@ -67,7 +68,17 @@ class _SearchViewState extends State<SearchView> {
                 child: ListView.builder(
                   itemCount: searchResults.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ListTile(title: Text(searchResults[index]));
+                    return ListTile(
+                      title: Text(searchResults[index]),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ResListView(category: searchResults[index]),
+                            ));
+                      },
+                    );
                   },
                 ))
           ],
